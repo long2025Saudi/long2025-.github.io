@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详图 - 红龙文化</title>
+    <style>
+/* 新增产品标题样式 */
+.product-caption h3 {
+    color: #c12c32;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* 产品描述优化 */
+.product-caption p {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 悬停效果增强 */
+.product-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+        /* 共用样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: #c12c32;
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f8d7da;
+        }
+        
+        /* 产品详情内容 */
+        .product-details {
+            padding: 60px 0;
+        }
+        .product-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #c12c32;
+        }
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .product-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .product-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .product-item:hover .product-image img {
+            transform: scale(1.05);
+        }
+        .product-caption {
+            padding: 20px;
+            text-align: center;
+        }
+        .back-btn {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 12px 0;
+            background-color: #c12c32;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #a82328;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">红龙文化</div>
+                <ul>
+                    <li><a href="index.html">返回首页</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- 产品详情内容 -->
+<section class="product-details">
+    <div class="container">
+        <h1 class="product-title">产品详细展示</h1>
+        
+        <div class="product-gallery">
+            <!-- 原有系列 -->
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrEDi3yAdv70m0ZIdXzffZcIY3Q0SP*tKwuvN4aGil0Ez3n11v.luqcH27stORsmoAwosKVJ0WE2AF04AHGpOZW9E!/b&bo=AAIAAgACAAIBByA!&rf=viewer_4" 
+                         alt="DIY产品设计">
+                </div>
+                <div class="product-caption">
+                    <h3>皮质笔记本系列</h3>
+                    <p>匠心缝制，柔韧耐用。伴你书写人生篇章</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrEDbgSKLlZn86AxuuFgm7nFCCKooKPnQzQMTvc7eEZXuPPXBpYOgYnte.U3.tmXAgArQS3UqzjCnDlGUAJXbbwcI!/b&bo=9AH0AfQB9AEDByI!&rf=viewer_4" 
+                         alt="文创产品">
+                </div>
+                <div class="product-caption">
+                    <h3>咖啡保温杯系列</h3>
+                    <p>持久锁温，让温度与风味始终如一</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrEA0w7byq*GHAD3zy.R*FM6ziup8NK8ju8oPF0xXwn..bjp2sZJkPUPYXAWFgMDB*V5kFcWnawIR5hPNNG0QQRTM!/b&bo=MAIwAjACMAIBByA!&rf=viewer_4" 
+                         alt="伊斯兰文创">
+                </div>
+                <div class="product-caption">
+                    <h3>亚克力夜灯系列</h3>
+                    <p>夜灯系列，支持定制图案和文字</p>
+                </div>
+            </div>
+
+            <!-- 新增的三个系列 -->
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrEB5S3XgDPSnWCo07SZjd38WthNxPRTgHrDvRKoGb6irW90mlNBRbioTGAkam6WM5QBQ*3BpX6fGWqMjNYUTglr4!/b&bo=MAIwAjACMAIBByA!&rf=viewer_4" 
+                         alt="亚克力夜灯">
+                </div>
+                <div class="product-caption">
+                    <h3>拼图系列</h3>
+                    <p>亲子互动、朋友协作，拼图让相聚更有温度</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrECuUtazc*9il2e.dWngU5R0q*Hw7EA84kMnH1WK21rkJLCCtfX1NcSNV73sT8dLxfGf4DkviRqJ1GGWOUy67BGs!/b&bo=4AHgAeAB4AEBByA!&rf=viewer_4" 
+                         alt="亚克力摆件">
+                </div>
+                <div class="product-caption">
+                    <h3>亚克力摆件系列</h3>
+                    <p>精致透明摆件，打造现代艺术空间</p>
+                </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrEDi85ueH9SXU5VHmrDuJGCxyxkJVwFoSdISDykh3XPz22P7NdCNVsmSHG**nWy96fK8PV9hcFVBEZV60T0fqVjI!/b&bo=gAKAAoACgAIBByA!&rf=viewer_4" 
+                         alt="帆布袋">
+                </div>
+                <div class="product-caption">
+                    <h3>帆布袋系列</h3>
+                    <p>环保棉麻材质，可定制专属印花设计</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> 返回首页</a>
+    </div>
+</section>

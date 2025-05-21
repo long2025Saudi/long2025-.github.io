@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红龙文化 - 专业文化创意服务提供商</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* 头部样式 */
+        header {
+            background-color: #c12c32; /* 红色主题 */
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #f8d7da;
+        }
+        
+        /* 横幅区域 */
+        .banner {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://gd-hbimg.huaban.com/7e8ecff5261cb31b281bb9625b0dbe670d70d244d223e-A1WixW_fw1200webp');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .banner-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .banner-content p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* 主要内容区域 */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #c12c32;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-image {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* 产品/服务展示 */
+        .services {
+            background-color: #f8d7da; /* 浅红色背景 */
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        .service-card:hover .service-image img {
+            transform: scale(1.05);
+        }
+        .service-info {
+            padding: 20px;
+        }
+        .service-info h3 {
+            margin-bottom: 10px;
+            color: #c12c32;
+        }
+        .service-info p {
+            margin-bottom: 15px;
+            color: #6c757d;
+        }
+        
+        /* 联系方式 */
+        .contact-methods {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .contact-card i {
+            font-size: 40px;
+            color: #c12c32;
+            margin-bottom: 20px;
+        }
+        .contact-card h3 {
+            margin-bottom: 15px;
+            color: #c12c32;
+        }
+        
+        /* 页脚 */
+        footer {
+            background-color: #c12c32;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            text-align: left;
+        }
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        .footer-section ul {
+            list-style: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: #f8d7da;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-section ul li a:hover {
+            color: white;
+        }
+        .copyright {
+            border-top: 1px solid #dc3545;
+            padding-top: 20px;
+            color: #f8d7da;
+            font-size: 14px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            nav ul {
+                display: none;
+            }
+            .banner-content h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header>
+    <div class="container">
+        <nav>
+            <div class="logo">红龙文化</div>
+            <ul>
+                <li><a href="product-details.html">产品详图</a></li>
+                <li><a href="#about">关于我们</a></li>
+                <li><a href="#services">服务项目</a></li>
+                <li><a href="#contact">联系我们</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    
+    <!-- 横幅区域 -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>创意无限，文化传承</h1>
+            <p>红龙文化公司致力于为客户提供专业的文化创意服务和解决方案</p>
+        </div>
+    </section>
+    
+    <!-- 关于我们 -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">关于我们</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>红龙文化成立于2025年，是一家专注于伊斯兰文化创意产业的专业公司。公司总部位于长沙，在沙特阿拉伯设有分支机构。</p>
+                    <p>我们拥有一支由资深设计师、策划师和文化专家组成的团队，致力于为客户提供全方位的文化创意服务。经过多年发展，我们已经服务了数百家企业和机构，在行业内树立了良好口碑。</p>
+                    <p>我们的使命是通过创意赋能文化，为客户创造价值，为传统文化注入新活力，为社会传播正能量。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://q8.itc.cn/q_70/images03/20241101/652e43f4b02f438ab5b9461713c8c86f.jpeg" alt="红龙文化团队">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 服务项目 -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">服务项目</h2>
+            <div class="service-grid">
+                <!-- 服务1 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrEFYi6Ev2VyoWkE918aa8PUhZjTYW21HXD2rLAtruHSl.g94N6qQq.ybFVyZKPSJgT45TjIIRuO*F6ayrjtuVSZo!/b&bo=vQKvAr0CrwIDNxI!&rf=viewer_4" alt="DIY产品设计">
+                    </div>
+                    <div class="service-info">
+                        <h3>DIY产品设计</h3>
+                        <p>从个人喜好到公司产品系统设计，提供全方位的DIY设计策划服务。</p>
+                    </div>
+                </div>
+                
+                <!-- 服务2 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://img0.baidu.com/it/u=1286325233,3598633641&fm=253&fmt=auto&app=120&f=JPEG?w=749&h=500" alt="送货上门服务">
+                    </div>
+                    <div class="service-info">
+                        <h3>送货上门服务</h3>
+                        <p>提供多种类产品以供选择，从选定产品到送货上门的一站式服务。</p>
+                    </div>
+                </div>
+                
+                <!-- 服务3 -->
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="http://m.qpic.cn/psc?/V51GlX751ez9ds3A9xhH0J5dR80DKSZN/TmEUgtj9EK6.7V8ajmQrEIeyg4O9dD6wCkByeoS2qOCa7jnq0NljDIeoI.lGykWP0h0BWwJGESkPkGBLEc7tCDilxO0WvweF32FuiMg5Kz0!/b&bo=LAIfAiwCHwIDByI!&rf=viewer_4" alt="文创产品开发">
+                    </div>
+                    <div class="service-info">
+                        <h3>文创产品开发</h3>
+                        <p>将伊斯兰传统文化与现代设计相结合，开发具有市场价值的文创产品，助力文化传播与商业价值实现。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 联系我们 -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">联系我们</h2>
+            <div class="contact-methods">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>公司地址</h3>
+                    <p>沙特拉伯麦加市</p>
+                    <p>AL SALAM STORE</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>联系电话</h3>
+                    <p>业务咨询: +966 572035840</p>
+                    <p>项目合作: +966 572035840</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>电子邮箱</h3>
+                    <p>商务合作: galadune48@gamail.com</p>
+                    <p>人才招聘: galadune48@gamail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于红龙</h3>
+                    <p>红龙文化公司致力于为客户提供专业的文化创意服务和解决方案，推动文化产业发展。</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="#about">关于我们</a></li>
+                        <li><a href="#services">服务项目</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="#"><i class="fab fa-tiktok"></i> TIKTOK</a></li>
+                        <li><a href="#"><i class="fab fa-snapchat"></i> Snapchat</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 红龙文化公司 版权所有 | 湘ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
